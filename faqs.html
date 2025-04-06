@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NZ-Fest FAQs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffffff, #f2f2f2);
+      color: #222;
+      padding: 30px 15px;
+    }
+
+    h1 {
+      text-align: center;
+      /* color: rgb(255, 67, 67); */
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+    }
+
+    .faq-container {
+    max-width: 900px;
+    margin: auto !important;
+  }
+
+  .faq-item {
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .faq-question {
+    background: linear-gradient(90deg, rgb(255, 67, 67), #f03e3e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 18px 24px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background: linear-gradient(90deg, rgb(245, 57, 57), #ed5d5d);
+  }
+
+  .toggle-icon {
+    width: 26px;
+    height: 26px;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.active .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 22px 24px;
+    background: #fffafa;
+    border-top: 1px solid #ffd9d9;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-2px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+  
+    .faq-container {
+        max-width: 390px;
+        margin: auto;
+    
+     
+      }
+    
+    .faq-item{
+        width: 375px !important;
+        margin-inline: auto;
+        margin-block: 10px;
+    }
+    .faq-question {
+      font-size: 1rem;
+      padding: 16px 20px;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      padding: 18px 20px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <h1>FAQs – NZ-Fest</h1>
+  <div class="faq-container">
+
+    <!-- FAQ Item 1 -->
+    <div class="faq-item">
+      <div class="faq-question">
+        Where will NZ-Fest take place?
+        <svg class="toggle-icon" viewBox="0 0 20 20">
+          <path d="M5 7l5 5 5-5H5z" fill="white"/>
+        </svg>
+      </div>
+      <div class="faq-answer">
+        NZ-Fest will be held on our university campus. Exact locations for each event will be mentioned in the event details section.
+      </div>
+    </div>
+    <!-- End of FAQ Item 1 -->
+  
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+      <div class="faq-question">
+        Who can participate in the events?
+        <svg class="toggle-icon" viewBox="0 0 20 20">
+          <path d="M5 7l5 5 5-5H5z" fill="white"/>
+        </svg>
+      </div>
+      <div class="faq-answer">
+        All currently enrolled students are eligible. Some events may also welcome participants from other institutions—check the event page for specific rules.
+      </div>
+    </div>
+    <!-- End of FAQ Item 2 -->
+  
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+      <div class="faq-question">
+        Is there any registration fee? registration fee?
+        <svg class="toggle-icon" viewBox="0 0 20 20">
+          <path d="M5 7l5 5 5-5H5z" fill="white"/>
+        </svg>
+      </div>
+      <div class="faq-answer">
+        Most events are free. If any event requires a fee, it will be clearly stated near its registration QR code.
+      </div>
+    </div>
+    <!-- End of FAQ Item 3 -->
+  
+    <!-- FAQ Item 4 -->
+    <div class="faq-item">
+      <div class="faq-question">
+        How do I register for events?
+        <svg class="toggle-icon" viewBox="0 0 20 20">
+          <path d="M5 7l5 5 5-5H5z" fill="white"/>
+        </svg>
+      </div>
+      <div class="faq-answer">
+        Navigate to the Events section and scan the QR codes provided to access the Google Forms for registration.
+      </div>
+    </div>
+    <!-- End of FAQ Item 4 -->
+  
+    <!-- FAQ Item 5 -->
+    <div class="faq-item">
+      <div class="faq-question">
+        Will participants receive certificates?
+        <svg class="toggle-icon" viewBox="0 0 20 20">
+          <path d="M5 7l5 5 5-5H5z" fill="white"/>
+        </svg>
+      </div>
+      <div class="faq-answer">
+        Yes, participants will receive digital certificates. Winners will also receive physical certificates and exciting prizes.
+      </div>
+    </div>
+    <!-- End of FAQ Item 5 -->
+  
+    <!-- FAQ Item 6 -->
+    <div class="faq-item">
+      <div class="faq-question">
+        How can I contact the coordinators?
+        <svg class="toggle-icon" viewBox="0 0 20 20">
+          <path d="M5 7l5 5 5-5H5z" fill="white"/>
+        </svg>
+      </div>
+      <div class="faq-answer">
+        Visit the Contact section to get in touch with individual event coordinators. Phone numbers and emails will be listed there.
+      </div>
+    </div>
+    <!-- End of FAQ Item 6 -->
+  
+  </div>
+  
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

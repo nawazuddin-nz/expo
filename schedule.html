@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Internal styles for about page */
+        :root {
+            --primary-color: rgb(255, 67, 67);
+            --secondary-color: #FFFFFF;
+            --accent-dark: #333333;
+        }
+
+        .about-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=2000') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .about-content {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 1rem 2rem;
+            position: relative;
+            width: 50%;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            transform: translateX(50px);
+        }
+
+        .timeline-item:nth-child(even).visible {
+            transform: translateX(0);
+        }
+
+        .timeline-content {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .timeline-year {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -35px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -35px;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-year {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(even) .timeline-year {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Navigation will be included from external CSS -->
+    </nav>
+
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>Our Journey</h1>
+            <p>A decade of innovation and cultural celebration</p>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>The Beginning</h3>
+                    <p>Started as a small technical workshop with just 100 students</p>
+                </div>
+                <div class="timeline-year">2012</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Growing Years</h3>
+                    <p>Expanded to include cultural events and reached 1000+ participantsExpanded to include cultural events and reached 1000+ participantsExpanded to include cultural events and reached 1000+ participantsExpanded to include cultural events and reached 1000+ participants</p>
+                </div>
+                <div class="timeline-year">2016</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Major Milestone</h3>
+                    <p>First international participation with teams from 5 countries</p>
+                </div>
+                <div class="timeline-year">2019</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Present Day</h3>
+                    <p>Over 10,000 participants from 100+ colleges worldwide</p>
+                </div>
+                <div class="timeline-year">2024</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Internal JavaScript for about page
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</body>
+</html>

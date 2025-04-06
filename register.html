@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - NZ-Fest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Internal styles for register page */
+        .register-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2000') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .register-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        .register-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #eee;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .event-selection {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 10px;
+        }
+
+        .event-option {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .event-option:hover {
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .event-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+
+        .register-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background: #ff3333;
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Navigation will be included from external CSS -->
+    </nav>
+
+    <section class="register-hero">
+        <div class="hero-content">
+            <h1>Register for NZ-Fest</h1>
+            <p>Join us for an unforgettable experience</p>
+        </div>
+    </section>
+
+    <div class="register-container">
+        <div class="register-form">
+            <form id="registrationForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="college">College/University</label>
+                        <input type="text" id="college" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Course</label>
+                        <input type="text" id="course" required>
+                    </div>
+                </div>
+
+                <div class="event-selection">
+                    <h3>Select Events</h3>
+                    <div class="event-option">
+                        <input type="checkbox" id="hackathon">
+                        <label for="hackathon">24-Hour Hackathon (March 15)</label>
+                    </div>
+                    <div class="event-option">
+                        <input type="checkbox" id="culturalNight">
+                        <label for="culturalNight">Cultural Night (March 16)</label>
+                    </div>
+                    <div class="event-option">
+                        <input type="checkbox" id="workshop">
+                        <label for="workshop">AI Workshop (March 17)</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="register-btn">Complete Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Internal JavaScript for register page
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('registrationForm');
+            
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Here you would typically handle form submission
+                alert('Thank you for registering! We will send you a confirmation email shortly.');
+                form.reset();
+            });
+
+            // Add animation to event options
+            const options = document.querySelectorAll('.event-option');
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    const checkbox = option.querySelector('input[type="checkbox"]');
+                    checkbox.checked = !checkbox.checked;
+                });
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</body>
+</html>

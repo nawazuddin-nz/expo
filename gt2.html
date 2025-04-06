@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - NZ-Fest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-grid {
+            column-count: 3;
+            column-gap: 15px;
+        }
+
+        .gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 15px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .gallery-item video {
+            object-fit: cover;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-item video {
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Gallery - NZ-Fest</div>
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&h=700" alt="Event"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&h=700t" alt="Concert"></div>
+            <div class="gallery-item"><video autoplay loop muted><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&h=700" alt="Workshop"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&h=700" alt="Networking"></div>
+            <div class="gallery-item"><video autoplay loop muted><source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4"></video></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&h=700" alt="Award Ceremony"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&h=700" alt="Panel Discussion"></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/600x600/?exhibition" alt="Exhibition"></div>
+            <div class="gallery-item"><video autoplay loop muted><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/400x700/?outdoor" alt="Outdoor Session"></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/800x500/?networking" alt="Networking"></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/500x600/?conference" alt="Conference"></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/400x400/?fun" alt="Fun Activities"></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/700x400/?closing" alt="Closing Ceremony"></div>
+        </div>
+    </div>
+</body>
+</html>

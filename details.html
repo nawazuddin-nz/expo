@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dance Performances - NZ-Fest</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff9f9;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      background-image: url('https://static.vecteezy.com/system/resources/previews/013/953/940/non_2x/banner-about-dancing-dancers-dance-latin-dances-men-and-women-at-salsa-and-bachata-competitions-vector.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .header-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #ffebee;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .header-content p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #ffeef0;
+    }
+
+    .container {
+      padding: 50px 10%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .section {
+      background: white;
+      border-left: 6px solid #ff1744;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+      transition: 0.3s ease;
+    }
+
+    .section:hover {
+      box-shadow: 0 8px 25px rgba(255, 23, 69, 0.071);
+    }
+
+    .section h2 {
+      color: #c2185b;
+      margin-bottom: 12px;
+      font-size: 1.6rem;
+    }
+
+    .section ul, .section p {
+      margin-left: 18px;
+    }
+
+    .highlight {
+      color: #00897b;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .header-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .container {
+        padding: 30px 6%;
+      }
+
+      header {
+        height: 45vh;
+      }
+
+      .header-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>💃 Dance Performances</h1>
+      <p>Showcasing creativity, rhythm, and cultural beats on the grand NZ-Fest stage!</p>
+    </div>
+  </header>
+
+  <section class="container">
+
+    <div class="section">
+      <h2>📖 About the Event</h2>
+      <p>Our Dance Performances celebrate rhythm, expression, and cultural diversity. Students get to showcase their talent and passion through various forms of dance – classical, contemporary, freestyle, and more.</p>
+    </div>
+
+    <div class="section">
+      <h2>🕒 Schedule</h2>
+      <ul>
+        <li><span class="highlight">Date:</span> 12th November 2025</li>
+        <li><span class="highlight">Time:</span> 5:00 PM – 8:00 PM</li>
+        <li><span class="highlight">Venue:</span> Open Air Auditorium</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📋 Guidelines & Rules</h2>
+      <ul>
+        <li>Maximum team size: 8 members</li>
+        <li>Performance time: 5–7 minutes per team</li>
+        <li>Props allowed (must be arranged by the team)</li>
+        <li>Vulgarity in performance will lead to disqualification</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎯 Objectives</h2>
+      <ul>
+        <li>Promote creativity and cultural expression</li>
+        <li>Encourage teamwork and confidence on stage</li>
+        <li>Provide a platform for artistic talent</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📦 Requirements</h2>
+      <ul>
+        <li>Sound system & stage lights</li>
+        <li>Changing rooms for participants</li>
+        <li>On-site volunteers for coordination</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎤 Faculty Coordinators</h2>
+      <ul>
+        <li>Prof. Emily Davis – <span class="highlight">emily.davis@nzfest.com</span></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>👥 Student Coordinators</h2>
+      <ul>
+        <li>James Brown – <span class="highlight">james.brown@nzfest.com</span></li>
+        <li>📞 +91 9876543210</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎁 Prizes</h2>
+      <p>Exciting trophies, certificates, and goodies for the best team and runner-up!</p>
+    </div>
+
+    <div class="section">
+      <h2>❓ FAQs</h2>
+      <ul>
+        <li><strong>Q:</strong> Can solo performances participate?<br><strong>A:</strong> Yes! Solo or group both are welcome.</li>
+        <li><strong>Q:</strong> Can we play our own music?<br><strong>A:</strong> Yes, submit your track a day prior.</li>
+      </ul>
+    </div>
+
+  </section>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Coordinators - NZ-Fest</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff5f5;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 8% 10px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #b71c1c;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .container {
+      padding: 40px 8%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 40px;
+    }
+
+    .contact-card {
+      position: relative;
+      display: flex;
+      background: #fff;
+      border: 2px solid #e53935;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex-direction: row;
+      min-height: 200px;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-img {
+      width: 130px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0 20px 100px 0;
+      border-right: 5px solid #e53935;
+      transform: rotate(-3deg);
+      margin-left: -20px;
+      margin-top: -20px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .event-title {
+      background: #fd3a3afc;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 12px 0 12px 0;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .details h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+      color: #b71c1c;
+    }
+
+    .details p {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+    }
+
+    .contact-info span {
+      font-weight: bold;
+      color: #d32f2f;
+    }
+
+    /* Wider mobile/tablet view: 2 cards per row */
+    @media screen and (min-width: 740px) and (max-width: 1090px) {
+      .card-img {
+        width: 165px;
+      }
+      
+    }
+
+    /* Mobile view adjustments */
+    @media screen and (max-width: 968px) {
+        header h1 {
+        font-size: 1.7rem !important;text-align: center;
+        margin-inline: auto;
+      }
+      header p {
+        font-size: 1rem !important;
+      }
+      .card-img {
+        width: 165px;
+        transform: rotate(-3deg);
+        border-radius: 0 20px 100px 0;
+        border-right: 5px solid #e53935;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-content {
+        align-items: center;
+        text-align: center;
+      }
+
+      .event-title {
+        text-align: center;
+        border-radius: 12px 0 12px 0;
+      }
+
+      .details h3 {
+        margin-top: 12px;
+      }
+    }
+
+    @media screen and (max-width: 478px) {
+      .card-img {
+        width: 125px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heading Section -->
+  <header style="text-align: center; padding: 40px 8% 10px;">
+    <h1 style="font-size: 2.6rem; color: #b71c1c; margin-bottom: 10px; letter-spacing: 1px;">
+      🎉 Event Coordinators
+    </h1>
+    <p style="font-size: 1.15rem; color: #555; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+      Meet the amazing faculty and student leads managing each event at <strong>NZ-Fest</strong>!
+    </p>
+  </header>
+
+  <section class="container">
+
+    <!-- Cricket Event -->
+    <div class="contact-card">
+      <img class="card-img" src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV-3XO/11683/1714407830967/front-left-side-47.jpg" alt="Cricket">
+      <div class="card-content">
+        <div class="event-title">Cricket Tournament</div>
+        <div class="details">
+          <h3>Faculty Coordinator</h3>
+          <p>Dr. John Doe</p>
+          <p>Email: <span>john.doe@nzfest.com</span></p>
+          <p>Phone: <span>+123 456 7890</span></p>
+
+          <h3>Student Coordinator</h3>
+          <p>Alice Williams</p>
+          <p>Email: <span>alice.w@nzfest.com</span></p>
+          <p>Phone: <span>+123 456 7891</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Showcase Event -->
+    <div class="contact-card">
+      <img class="card-img" src="https://cdni.autocarindia.com/Features/_New%20Sedans%20%20Sports%20Cars%20Web%20Resized%20%20Watermarked._002.jpeg" alt="Tech Showcase">
+      <div class="card-content">
+        <div class="event-title">Tech Showcase</div>
+        <div class="details">
+          <h3>Faculty Coordinator</h3>
+          <p>Prof. Sarah Lee</p>
+          <p>Email: <span>sarah.lee@nzfest.com</span></p>
+          <p>Phone: <span>+123 456 7892</span></p>
+
+          <h3>Student Coordinator</h3>
+          <p>Mark Johnson</p>
+          <p>Email: <span>mark.johnson@nzfest.com</span></p>
+          <p>Phone: <span>+123 456 7893</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dance Performances Event -->
+    <div class="contact-card">
+      <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlLXP2KD46ABhddqZXoejNTziRv37Rf8_G6A&s" alt="Dance">
+      <div class="card-content">
+        <div class="event-title">Dance Performances</div>
+        <div class="details">
+          <h3>Faculty Coordinator</h3>
+          <p>Prof. Emily Davis</p>
+          <p>Email: <span>emily.davis@nzfest.com</span></p>
+          <p>Phone: <span>+123 456 7894</span></p>
+
+          <h3>Student Coordinator</h3>
+          <p>James Brown</p>
+          <p>Email: <span>james.brown@nzfest.com</span></p>
+          <p>Phone: <span>+123 456 7895</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fashion Fiesta Event -->
+    <div class="contact-card">
+      <img class="card-img" src="https://thumbs.dreamstime.com/b/cricket-bat-ball-26560801.jpg" alt="Fashion Show">
+      <div class="card-content">
+        <div class="event-title">Fashion Fiesta</div>
+        <div class="details">
+          <h3>Faculty Coordinator</h3>
+          <p>Dr. Rachel Green</p>
+          <p>Email: <span>rachel.green@nzfest.com</span></p>
+          <p>Phone: <span>+123 456 7896</span></p>
+
+          <h3>Student Coordinator</h3>
+          <p>Chandler Bing</p>
+          <p>Email: <span>chandler.bing@nzfest.com</span></p>
+          <p>Phone: <span>+123 456 7897</span></p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+</html>

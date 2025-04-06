@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NZ-Fest Footer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+
+    .footer-section h3 {
+      color: rgb(255, 67, 67);
+      margin-bottom: 15px;
+    }
+
+    .footer-section h4 {
+      color: rgb(255, 137, 137);
+      margin-bottom: 10px;
+    }
+
+    .footer-section p, 
+    .footer-section a, 
+    .footer-bottom {
+      color: #ccc;
+      text-decoration: none;
+      line-height: 1.7;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a:hover, 
+    .footer-section a:hover {
+      color: #fff;
+    }
+
+    .footer-social a {
+      margin-right: 15px;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      transform: scale(1.1);
+    }
+
+    .footer-social a img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(90%);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      .footer-section {
+        width: 100%;
+      }
+
+      .footer-section h3,
+      .footer-section h4 {
+        font-size: 1.2rem;
+        text-align: left;
+      }
+
+      .footer-section p,
+      .footer-section a {
+        font-size: 0.95rem;
+        text-align: left;
+      }
+
+      .footer-links ul {
+        padding-left: 0;
+        text-align: left;
+      }
+
+      .footer-social a {
+        margin: 0 12px 0 0;
+      }
+
+      .footer-bottom {
+        font-size: 0.85rem;
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FOOTER START -->
+  <footer>
+    <div class="footer-container">
+      <!-- About -->
+      <div class="footer-section">
+        <h3>NZ-Fest</h3>
+        <p>An intercollegiate celebration of talent, creativity, and collaboration. Join us for thrilling events and unforgettable moments.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: info@nzfest.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: KU Campus, India</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section footer-social">
+        <h4>Follow Us</h4>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 NZ-Fest. Designed by NHGames Team.
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+
+</body>
+</html>

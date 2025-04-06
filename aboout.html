@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About NZ-Fest</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fef9ff, #e3f2fd);
+      color: #333;
+      height: 100%;
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 30px;
+      max-width: 1200px;
+      margin: auto;
+    
+      gap: 50px;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text h1 {
+      font-size: 2.8rem;
+      color: #2e2e2e;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .about-text h1::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: #6a1b9a;
+      margin-top: 10px;
+      border-radius: 2px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .about-highlight {
+      background: #f3e5f5;
+      padding: 15px;
+      border-left: 5px solid #8e24aa;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .about-img {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .photo-card-wrapper {
+      position: relative;
+    }
+
+    .photo-card-wrapper::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 100%;
+      height: 100%;
+      border: 4px dashed #ba68c8;
+      transform: rotate(-6deg);
+      border-radius: 20px;
+      z-index: 0;
+    }
+
+    .photo-card {
+      position: relative;
+      transform: rotate(-5deg);
+      box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      z-index: 2;
+    }
+
+    .photo-card img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-card:hover {
+      transform: rotate(0deg) scale(1.03);
+    }
+
+    .extra-photo {
+      position: absolute;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .extra1 {
+      top: -30px;
+      left: -40px;
+      transform: rotate(-15deg);
+      z-index: 1;
+    }
+
+    .extra2 {
+      bottom: -30px;
+      right: -40px;
+      transform: rotate(12deg);
+      z-index: 0;
+    }
+
+    .extra-photo:hover {
+      transform: scale(1.05) rotate(0deg);
+    }
+
+    @media screen and (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .about-text {
+        margin-bottom: 30px;
+      }
+
+      .about-text h1::after{
+        margin-left: 30px;
+        margin-bottom: -10px;
+      }
+
+      .photo-card-wrapper::before {
+        top: -10px;
+        left: -10px;
+        border-width: 3px;
+      }
+
+      .photo-card {
+        transform: none;
+      }
+
+      .photo-card img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      .extra-photo {
+        display: none;
+      
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="about-section">
+    <div class="about-text">
+      <h1>About NZ-Fest</h1>
+      <p><strong>NZ-Fest</strong> is Kishkinda University’s vibrant intercollegiate celebration, launched proudly in 2024 in collaboration with BITM. Now in its second edition (2025), the fest returns even bigger and better!</p>
+      <p>This is not your typical college fest — NZ-Fest is a bold mix of culture, creativity, and cutting-edge innovation. From coding battles to cultural performances, art exhibitions to tech showcases — it’s a space where ideas are unleashed.</p>
+      <p>Growing from a fresh initiative to a campus phenomenon, NZ-Fest unites students from different fields and backgrounds to collaborate, compete, and celebrate their talents.</p>
+      <div class="about-highlight">
+        🚀 Second year. <br> Double the energy. One unforgettable celebration. Welcome to NZ-Fest 2025!
+      </div>
+    </div>
+
+    <div class="about-img">
+      <img class="extra-photo extra1" src="https://media.collegedekho.com/media/img/news/college_fests.jpg?height=310&width=615" alt="Mini Card 1" />
+      <img class="extra-photo extra2" src="https://media.collegedekho.com/media/img/news/college_fests.jpg?height=310&width=6150" alt="Mini Card 2" />
+
+      <div class="photo-card-wrapper">
+        <div class="photo-card">
+          <img src="https://media.collegedekho.com/media/img/news/college_fests.jpg?height=310&width=615" alt="Festival Celebration" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
